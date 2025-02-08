@@ -1,0 +1,230 @@
+/* Định dạng chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #fff8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  color: rgb(18, 19, 19);
+  padding: 1em 0;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Nội dung chính */
+main {
+  padding: 20px;
+}
+
+/* Biểu mẫu */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #7e3e3e;
+  border-radius: 4px;
+}
+
+.form-section button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-section button:hover {
+  background-color: #218838;
+}
+
+nav {
+  background-color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Căn đều các mục */
+  padding: 10px 0;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+nav a:hover {
+  background-color: #ad6262;
+}
+
+/* Bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+/* Logo */
+.logo-container {
+  width: 50px;
+  height: 50px;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px auto;
+}
+
+/* Banner toàn màn hình */
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  animation: moveBanner 15s linear infinite;
+}
+
+@keyframes moveBanner {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slideAnimation 20s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideAnimation {
+  0% { transform: translateX(0%); }
+  25% { transform: translateX(0%); }
+  30% { transform: translateX(-100%); }
+  50% { transform: translateX(-100%); }
+  55% { transform: translateX(-200%); }
+  75% { transform: translateX(-200%); }
+  80% { transform: translateX(-300%); }
+  100% { transform: translateX(-300%); }
+}
+
+
+
+/* Footer */
+.myfooter {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: left;
+}
+
+.myfooter h1 {
+  margin-bottom: 20px;
+}
+
+.myfooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+.myfooter ul li {
+  margin-bottom: 10px;
+}
+
+.myfooter ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.myfooter ul li a:hover {
+  color: #cccccc;
+}
