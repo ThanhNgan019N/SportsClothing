@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,95 +12,555 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <img src="image/ww.png" alt="logo">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="navbar-brand" aria-current="page" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand" href="#">Clothes</a>
 
-                        </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand" href="#">Shoes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand" aria-disabled="true">Pickleball</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="navbar-brand" aria-disabled="true">Accessory</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    <form class="nav-item">
-                        <li class="nav-link" href="login.html"> <img src="image/login.png" alt="login"
-                                    class="login"></a>
-                    </form>
-                    <form class="nav-item">
-                        <li class="nav-link" href="cart.html"> <img src="image/d.png" alt="cart"
-                                    class="cart-icon"></a>
-                    </form>
-                    
-                </div>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="image/sgdongree.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Clothes.html">Clothes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Shoes.html">Shoes</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <link rel="stylesheet" href="ClothingResearchProject.css">
+                    <script src="Search.js"></script>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><img src="image/login.png" alt="Login" width="30"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html"><img src="image/d.png" alt="Cart" width="30"></a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
     </nav>
 
-    <div class="container">
-        <div id="toggle">
-            <i class="fas fa-bars"></i>
+    <!-- Banner -->
+    <div class="container banner mt-4">
+        <div class="slides">
+            <img src="image/dd.jpg" alt="Banner 1">
+            <img src="image/ss.jpg" alt="Banner 3">
+            <img src="image/banner_giay.webp" alt="Banner 4">
+            <img src="image/banner_polo_camaro3.jpg" alt="Banner 5">
         </div>
-        <div class="banner">
-            <div class="slides">
-                <div class="slide"><img src="image/dd.jpg" alt="banner1"></div>
-                <div class="slide"><img src="image/ss.jpg" alt="banner2"></div>
-            </div>
-        </div>
-        <script src="script.js"></script>
-
     </div>
-    </section>
+
+    <!-- Header -->
     <header>
         <h1>SAIGON DONGREE FC</h1>
     </header>
+
+    <!-- Product Section -->
     <main>
-        <section class="products">
+        <h3>Clothes</h3>
+        <section class="container products">
             <div class="product">
-                <img src="image/PRO-Hero-VangKem.jpg" alt="product1">
-                <h2>Áo bóng đá Pro-Hero</h2>
-                <span class="price">189.000đ</span>
-                <button>Buy Now</button>
+                <img src="image/PRO-Hero-VangKem.jpg" alt="Product 1">
+                <h2>Áo bóng đá Pro-Hero Vàng Kem</h2>
+                <span class="price">129.000đ</span>
+                <label for="size1"></label>
+                <select id="size1">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Pro-Hero Vàng Kem', 129000, 'image/PRO-Hero-VangKem.jpg', document.getElementById('size1').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Pro-Hero Vàng Kem', 129000, 'image/PRO-Hero-VangKem.jpg', document.getElementById('size1').value)">Buy</button>
+            </div>
+
+            <div class="product">
+                <img src="image/PRO-Hero-Hong.jpg" alt="Product 2">
+                <h2>Áo bóng đá Pro-Hero Hồng Đen</h2>
+                <span class="price">129.000đ</span>
+                <label for="size2"></label>
+                <select id="size2">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Pro-Hero Hồng Đen', 129000, 'image/PRO-Hero-Hong.jpg', document.getElementById('size2').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Pro-Hero Hồng Đen', 129000, 'image/PRO-Hero-Hong.jpg', document.getElementById('size2').value)">Buy</button>
             </div>
             <div class="product">
-                <img src="image/ROZACO-FASHION.jpg" alt="product2">
-                <h2>Áo bóng đá Rozaco</h2>
-                <span class="price">190.000đ</span>
-                <button>Buy Now</button>
+                <img src="image/ROZACO-FASHION.jpg" alt="Product 3">
+                <h2>Áo bóng đá Rozaco Xanh Ngọc</h2>
+                <span class="price">200.000đ</span>
+                <label for="size3"></label>
+                <select id="size3">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Rozaco Xanh Ngọc', 200000, 'image/ROZACO-FASHION.jpg', document.getElementById('size3').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Rozaco Xanh Ngọc', 200000, 'image/ROZACO-FASHION.jpg', document.getElementById('size3').value)">Buy</button>
             </div>
             <div class="product">
-                <img src="image/KOREA-REPUBLIC.jpg" alt="product3">
+                <img src="image/ROZACO-FASHION-TimThan.jpg" alt="Product 4">
+                <h2>Áo bóng đá Rozaco Tím Than</h2>
+                <span class="price">200.000đ</span>
+                <label for="size4"></label>
+                <select id="size4">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Rozaco Tím Than', 200000, 'image/ROZACO-FASHION-TimThan.jpg', document.getElementById('size4').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Rozaco Tím Than', 200000, 'image/ROZACO-FASHION-TimThan.jpg', document.getElementById('size4').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/KOREA-REPUBLIC.jpg" alt="Product 5">
                 <h2>Áo bóng đá đội tuyển Korean-Republic</h2>
                 <span class="price">200.000đ</span>
-                <button>Buy Now</button>
+                <label for="size5"></label>
+                <select id="size5">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá đội tuyển Korean-Republic', 200000, 'image/KOREA-REPUBLIC.jpg', document.getElementById('size5').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá đội tuyển Korean-Republic', 200000, 'image/KOREA-REPUBLIC.jpg', document.getElementById('size5').value)">Buy</button>
             </div>
             <div class="product">
-                <img src="image/AoDiChuyen-ROZACO-26-CoWed.jpg" alt="product4">
-                <h2>Áo di chuyển Rozaco</h2>
-                <span class="price">190.000đ</span>
-                <button>Buy Now</button>
+                <img src="image/AoDiChuyen-ROZACO-26-CoWed.jpg" alt="Product 6">
+                <h2>Áo di chuyển Rozaco Xám</h2>
+                <span class="price">250.000đ</span>
+                <label for="size6"></label>
+                <select id="size6">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo di chuyển Rozaco Xám', 250000, 'image/AoDiChuyen-ROZACO-26-CoWed.jpg', document.getElementById('size6').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo di chuyển Rozaco Xám', 250000, 'image/AoDiChuyen-ROZACO-26-CoWed.jpg', document.getElementById('size6').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/AoDiChuyen-ROZACO-08-CoWed.jpg" alt="Product 7">
+                <h2>Áo di chuyển Rozaco Xanh Hồng</h2>
+                <span class="price">250.000đ</span>
+                <label for="size7"></label>
+                <select id="size7">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo di chuyển Rozaco Xanh Hồng', 250000, 'image/AoDiChuyen-ROZACO-08-CoWed.jpg', document.getElementById('size7').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo di chuyển Rozaco Xanh Hồng', 250000, 'image/AoDiChuyen-ROZACO-08-CoWed.jpg', document.getElementById('size7').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/AoDiChuyen-ROZACO-29-CoWed.jpg" alt="Product 8">
+                <h2>Áo di chuyển Rozaco </h2>
+                <span class="price">250.000đ</span>
+                <label for="size8"></label>
+                <select id="size8">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo di chuyển Rozaco', 250000, 'image/AoDiChuyen-ROZACO-29-CoWed.jpg', document.getElementById('size8').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo di chuyển Rozaco', 250000, 'image/AoDiChuyen-ROZACO-29-CoWed.jpg', document.getElementById('size8').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/wika.jpg" alt="Product 9">
+                <h2>Áo bóng đá Wika Blueming - Ngọc</h2>
+                <span class="price">180.000đ</span>
+                <label for="size9"></label>
+                <select id="size9">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Wika Blueming - Ngọc', 180000, 'image/wika.jpg', document.getElementById('size9').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Wika Blueming - Ngọc', 180000, 'image/wika.jpg', document.getElementById('size9').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/wikaruler.jpg" alt="Product 10">
+                <h2>Áo bóng đá Wika Ruler - Trắng</h2>
+                <span class="price">180.000đ</span>
+                <label for="size10"></label>
+                <select id="size10">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Wika Ruler - Trắng', 180000, 'image/wikaruler.jpg', document.getElementById('size10').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Wika Ruler - Trắng', 180000, 'image/wikaruler.jpg', document.getElementById('size10').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/shark.jpg" alt="Product 11">
+                <h2>Áo bóng đá Riki Shark - Trắng</h2>
+                <span class="price">200.000đ</span>
+                <label for="size11"></label>
+                <select id="size11">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Riki Shark - Trắng', 200000, 'image/shark.jpg', document.getElementById('size11').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Riki Shark - Trắng', 200000, 'image/shark.jpg', document.getElementById('size11').value)">Buy</button>
+            </div>
+            <div class="product">
+                <img src="image/astra.jpg" alt="Product 12">
+                <h2>Áo bóng đá Egan Astra</h2>
+                <span class="price">250.000đ</span>
+                <label for="size12"></label>
+                <select id="size12">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button
+                    onclick="addToCart('Áo bóng đá Egan Astra', 250000, 'image/astra.jpg', document.getElementById('size12').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Egan Astra', 250000, 'image/astra.jpg', document.getElementById('size12').value)">Buy</button>
             </div>
         </section>
+        <h3>Shoes</h3>
+        <section class="container products">
+            <div class="product">
+                <img src="image/zocker1.webp" alt="Product 1">
+                <h2>Giày đá bóng Zocker Winner Energy Trắng</h2>
+                <span class="price">660.000đ</span>
+                <label for="size1"> Size:</label>
+                <select id="size1">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Áo bóng đá Pro-Hero Vàng Kem', 129000, 'image/zocker1.webp', document.getElementById('size1').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Áo bóng đá Pro-Hero Vàng Kem', 129000, 'image/zocker1.webp', document.getElementById('size1').value)">Buy</button>
+                </div>
+                
+            </div>
+            <div class="product">
+                <img src="image/zocker2.webp" alt="Product 2">
+                <h2>Giày đá bóng Zocker Pioneer Trắng</h2>
+                <span class="price">1.390.000đ</span>
+                <label for="size2"> Size:</label>
+                <select id="size2">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Giày đá bóng Zocker Pioneer Trắng', 129000, 'image/zocker2.webp', document.getElementById('size2').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Zocker Pioneer Trắng', 129000, 'image/zocker2.webp', document.getElementById('size2').value)">Buy</button>
+                </div>
+             
+            </div>
+            <div class="product">
+                <img src="image/zocker3.jpg" alt="Product 3">
+                <h2>Giày đá bóng Zocker Winner Energy Xanh</h2>
+                <span class="price">660.000đ</span>
+                <label for="size3"> Size:</label>
+                <select id="size3">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Giày đá bóng Zocker Winner Energy Xanh', 660000, 'image/zocker3.jpg', document.getElementById('size3').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Zocker Winner Energy Xanh', 660000, 'image/zocker3.jpg', document.getElementById('size3').value)">Buy</button>
+                </div>
+                
+            </div>
+            <div class="product">
+                <img src="image/zocker4.webp" alt="Product 4">
+                <h2>Giày đá bóng Zocker Inspire PRO Rose Red/Green</h2>
+                <span class="price">730.000đ</span>
+                <label for="size4"> Size:</label>
+                <select id="size4">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Giày đá bóng Zocker Inspire PRO Rose Red/Green', 730000, 'image/zocker4.webp', document.getElementById('size4').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Zocker Inspire PRO Rose Red/Green', 730000, 'image/zocker4.webp', document.getElementById('size4').value)">Buy</button>
+                </div>   
+            </div>
+            <div class="product">
+                <img src="image/puma.jpeg" alt="Product 5">
+                <h2>Giày đá bóng Puma Ultra Ultimate Xanh Hồng TF</h2>
+                <span class="price">500.000đ</span>
+                <label for="size5"> Size:</label>
+                <select id="size5">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Giày đá bóng Puma Ultra Ultimate Xanh Hồng TF', 500000, 'image/puma.jpeg', document.getElementById('size5').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Puma Ultra Ultimate Xanh Hồng TF', 500000, 'image/puma.jpeg', document.getElementById('size5').value)">Buy</button>
+                </div>               
+            </div>
+            <div class="product">
+                <img src="image/puma2.webp" alt="Product 6">
+                <h2>Giày đá bóng Puma Future Z 1.1 TF Xanh Chuối</h2>
+                <span class="price">700.000đ</span>
+                <label for="size6"> Size:</label>
+                <select id="size6">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Giày đá bóng Puma Future Z 1.1 TF Xanh Chuối', 700000, 'image/puma2.webp', document.getElementById('size6').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Puma Future Z 1.1 TF Xanh Chuối', 700000, 'image/puma2.webp', document.getElementById('size6').value)">Buy</button>
+                </div>
+                
+            </div>
+            <div class="product">
+                <img src="image/f50.jpeg" alt="Product 7">
+                <h2>Giày đá bóng Adidas F50 Pro TF - Trắng/Xanh</h2>
+                <span class="price">1.650.000đ</span>
+                <label for="size7"> Size:</label>
+                <select id="size7">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                    onclick="addToCart('Giày đá bóng Adidas F50 Pro TF - Trắng/Xanh', 1650000, 'image/f50.jpeg', document.getElementById('size7').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Adidas F50 Pro TF - Trắng/Xanh', 1650000, 'image/f50.jpeg', document.getElementById('size7').value)">Buy</button>
+                </div>               
+            </div>
+            <div class="product">
+                <img src="image/mizuno.jpeg" alt="Product 8">
+                <h2>Giày đá bóng Mizuno Mizuno Morelia TF Trắng/Xanh</h2>
+                <span class="price">1.690.000đ</span>
+                <label for="size8"> Size:</label>
+                <select id="size8">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div> 
+                    <button
+                    onclick="addToCart('Giày đá bóng Mizuno Mizuno Morelia TF Trắng/Xanh<', 1690000, 'image/mizuno.jpeg', document.getElementById('size8').value)">Add
+                    to Cart</button>
+                <button
+                    onclick="buyNow('Giày đá bóng Mizuno Mizuno Morelia TF Trắng/Xanh<', 1690000, 'image/mizuno.jpeg', document.getElementById('size8').value)">Buy</button>
+            </div>
+                </div>
+                
+            <div class="product">
+                <img src="image/nike1.webp" alt="Product 9">
+                <h2>Giày đá bóng Nike Zoom Mercurial Vapor 15 Pro TF</h2>
+                <span class="price">2.750.000đ</span>
+                <label for="size9"> Size:</label>
+                <select id="size9">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                        onclick="addToCart('Giày đá bóng Nike Zoom Mercurial Vapor 15 Pro TF', 2750000, 'image/nike1.webp', document.getElementById('size9').value)">Add
+                        to Cart</button>
+                    <button
+                        onclick="buyNow('Giày đá bóng Nike Zoom Mercurial Vapor 15 Pro TF', 2750000, 'image/nike1.webp', document.getElementById('size9').value)">Buy</button>
+    
+                </div>
+            </div>
+            <div class="product">
+                <img src="image/nike3.jpeg" alt="Product 10">
+                <h2>Giày đá bóng Mercurial Superfly 10 Academy MDS 09 TF - Trắng/Xanh</h2>
+                <span class="price">2.050.000đ</span>
+                <label for="size10"> Size:</label>
+                <select id="size10">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                        onclick="addToCart('Giày đá bóng Mercurial Superfly 10 Academy MDS 09 TF - Trắng/Xanh', 2050000, 'image/nike3.jpeg', document.getElementById('size10').value)">Add
+                        to Cart</button>
+                    <button
+                        onclick="buyNow('Giày đá bóng Mercurial Superfly 10 Academy MDS 09 TF - Trắng/Xanh', 2050000, 'image/nike3.jpeg', document.getElementById('size10').value)">Buy</button>
+    
+                </div>
+            </div>
+            <div class="product">
+                <img src="image/qh19.jpg" alt="Product 11">
+                <h2>Giày đá bóng Wika QH19 Z-Vol Quang Hải trắng</h2>
+                <span class="price">800.000đ</span>
+                <label for="size11"> Size:</label>
+                <select id="size11">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                        onclick="addToCart('Giày đá bóng Wika QH19 Z-Vol Quang Hải trắng', 800000, 'image/qh19.jpg', document.getElementById('size11').value)">Add
+                        to Cart</button>
+                    <button
+                        onclick="buyNow('Giày đá bóng Wika QH19 Z-Vol Quang Hải trắng', 800000, 'image/qh19.jpg', document.getElementById('size11').value)">Buy</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="image/kamito11.webp" alt="Product 12">
+                <h2>Giày đá bóng Kamito TA11 Xanh Bích</h2>
+                <span class="price">700.000đ</span>
+                <label for="size12"> Size:</label>
+                <select id="size12">
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+                <div>
+                    <button
+                        onclick="addToCart('Giày đá bóng Kamito TA11 Xanh Bích', 700000, 'image/kamito11.webp', document.getElementById('size12').value)">
+                        Add
+                        to Cart</button>
+                    <button
+                        onclick="buyNow('Giày đá bóng Kamito TA11 Xanh Bích', 700000, 'image/kamito11.webp', document.getElementById('size12').value)">Buy</button>
+                </div>
+            </div>
+        </section>
+        <script src="cart.js"></script>
+        <script src="ClothingResearchProject.js"></script>
+        <section class="myfooter">
+            <div class="row">
+                <div class="col">
+                    <h2>Policy</h2>
+                    <ul>
+                        <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                        <li><a href="ProductDeclaration.html">Product Declaration</a></li>
+                        <li><a href="PurchasePolicy.html">Purchase Policy</a></li>
+                </div>
+                <div class="col">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="Paymentmethods.html">Payment methods</a></li>
+                        <li><a href="TermsofService.html">Terms of Service</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>🏠 Hanoi: 160 Trieu Viet Vuong, Bui Thi Xuan Ward, Hai Ba Trung District</li>
+                        <li>🏠 Ho Chi Minh City: 155 Âu Cơ, Tan Thanh Ward, Tan Binh District </li>
+                        <li>☎️ <a href="tel:0989999789">0989 999 789</a></li>
+                        <li>📧 <a href="mailto:sgdongreefc@gmail.com">sgdongreefc@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
+
 </html>

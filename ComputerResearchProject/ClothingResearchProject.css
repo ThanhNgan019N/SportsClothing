@@ -8,8 +8,8 @@
 
 body {
   background-color: #fff8f8;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 }
 
 /* Header */
@@ -26,9 +26,9 @@ header img {
 }
 
 /* Nội dung chính */
-main {
+/* main {
   padding: 20px;
-}
+} */
 
 /* Biểu mẫu */
 .form-section {
@@ -73,12 +73,19 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 12px 24px;
+  font-size: 30px;
+  font-weight: bold;
 }
 nav a:hover {
-  background-color: #ad6262;
+  background-color: white;
 }
+.navbar-nav .nav-link {
+  font-size: 30px; /* Tăng cỡ chữ */
+  font-weight: bold; /* Làm đậm chữ */
+  padding: 12px 30px; /* Tăng khoảng cách giữa các mục */
+}
+
 
 /* Bảng */
 table {
@@ -98,41 +105,51 @@ table th {
 
 /* Logo */
 .logo-container {
-  width: 50px;
-  height: 50px;
+  width: 100%;  /* Tăng chiều rộng */
+  height: 100%; /* Tăng chiều cao */
   background-image: url("logo.png");
   background-repeat: no-repeat;
   background-position: center;
-  margin: 20px auto;
+  background-size: contain; /* Đảm bảo logo không bị méo */
+  margin: 30px auto;
 }
 
-/* Banner toàn màn hình */
+
+.navbar-brand img {
+  height: 120px; /* Tăng chiều cao logo */
+  width: auto; /* Giữ tỉ lệ ảnh */
+}
+
+/* Banner chính */
 .banner {
   width: 100%;
-  height: 100vh;
+  height: 100%; /* Chiều cao full màn hình */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
- 
 }
 
+/* Đảm bảo ảnh hiển thị đúng kích thước */
 .banner img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* Hiển thị toàn bộ ảnh mà không cắt */
 }
 
+/* Nội dung trên banner */
 .banner-content {
   position: absolute;
   color: white;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  animation: moveBanner 15s linear infinite;
+  width: 100%;
+  max-width: 1200px;
 }
 
+/* Keyframe animation */
 @keyframes moveBanner {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
@@ -141,7 +158,7 @@ table th {
 /* Slider */
 .slider {
   width: 100%;
-  height: 300px;
+  height: auto;
   overflow: hidden;
   position: relative;
 }
@@ -149,7 +166,7 @@ table th {
 .slides {
   display: flex;
   width: 300%;
-  animation: slideAnimation 20s infinite;
+  animation: slideAnimation 20s linear infinite;
 }
 
 .slide {
@@ -160,7 +177,14 @@ table th {
 .slide img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain; /* Hiển thị toàn bộ ảnh không bị cắt */
+}
+
+@keyframes slideAnimation {
+  0%, 20% { transform: translateX(0%); }
+  25%, 45% { transform: translateX(-100%); }
+  50%, 70% { transform: translateX(-200%); }
+  75%, 100% { transform: translateX(0%); }
 }
 
 .buttons {
@@ -178,7 +202,7 @@ table th {
   border: none;
   padding: 15px 20px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .buttons button:hover {
@@ -196,18 +220,164 @@ table th {
   100% { transform: translateX(-300%); }
 }
 
-
-
-/* Footer */
-.myfooter {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 40px 0;
-  text-align: left;
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+.product button:hover {
+  background-color: #0056b3;
 }
 
-.myfooter h1 {
-  margin-bottom: 20px;
+header h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.products {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1rem;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.product h2 {
+  font-size: 1rem; /* Giảm kích thước chữ */
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Chia cột tự động */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e44d26;
+}
+
+.product button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+h3::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.myfooter {
+  background-color: #222;
+  color: white;
+  padding: 40px 0;
+}
+
+.myfooter .row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.myfooter .col {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.myfooter h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  display: inline-block;
 }
 
 .myfooter ul {
@@ -220,11 +390,45 @@ table th {
 }
 
 .myfooter ul li a {
-  color: #ffffff;
+  color: #ccc;
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .myfooter ul li a:hover {
-  color: #cccccc;
+  color: #007bff;
+}
+
+.myfooter ul li a::before {
+  content: "• ";
+  color: #007bff;
+  font-weight: bold;
+}
+
+.myfooter ul li a[href^="tel"] {
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.myfooter ul li a[href^="mailto"] {
+  font-weight: bold;
+  color: #00ccff;
+}
+
+@media (max-width: 768px) {
+  .myfooter .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.myfooter ul li a:hover {
+  color: #007bff;
+  transform: translateX(5px); /* Thêm hiệu ứng dịch chuyển */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+nav.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }

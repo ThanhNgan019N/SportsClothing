@@ -1,0 +1,42 @@
+#totalPrice {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733;
+}
+
+.checkout-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-container button {
+    background-color: #28a745;
+    padding: 12px 20px;
+    font-size: 18px;
+}
+
+.checkout-container button:hover {
+    background-color: #218838;
+}
+
+/* ===== Thanh toán ===== */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+}
+
+form button {
+    width: 100%;
+    background-color: #ff5733;
+    padding: 12px;
+    font-size: 16px;
+}
